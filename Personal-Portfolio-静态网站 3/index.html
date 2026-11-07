@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#b4d9f3">
+  <title>Personal Portfolio · 个人作品集</title>
+  <meta name="description" content="个人信息、学历背景、项目与实践、技能与实证及联系方式。">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/Pangolin-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="fonts/ZCOOLKuaiLe-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+<svg class="svg-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter id="pencil" x="-12%" y="-12%" width="124%" height="124%" color-interpolation-filters="sRGB">
+   <feTurbulence type="fractalNoise" baseFrequency=".075" numOctaves="3" seed="7" result="edge"/>
+   <feDisplacementMap in="SourceGraphic" in2="edge" scale="1.9" result="rough"/>
+   <feTurbulence type="fractalNoise" baseFrequency=".72" numOctaves="3" seed="23" result="tooth"/>
+   <feColorMatrix in="tooth" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  5 0 0 0 -1.5" result="pigment"/>
+   <feComposite in="rough" in2="pigment" operator="in" result="dry"/>
+   <feComponentTransfer in="rough" result="undercoat"><feFuncA type="linear" slope=".18"/></feComponentTransfer>
+   <feMerge><feMergeNode in="undercoat"/><feMergeNode in="dry"/></feMerge>
+  </filter>
+  <filter id="crayon-text" x="-5%" y="-15%" width="110%" height="130%" color-interpolation-filters="sRGB">
+   <feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="3" seed="11" result="tooth"/>
+   <feColorMatrix in="tooth" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  6 0 0 0 -1.8" result="pigment"/>
+   <feComposite in="SourceGraphic" in2="pigment" operator="in"/>
+  </filter>
+  <clipPath id="cap-outline"><path d="M113 255C124 168 189 102 274 98c89-5 168 61 178 153l-8 22-322 4Z"/></clipPath>
+  <pattern id="wax-grain" width="17" height="23" patternUnits="userSpaceOnUse" patternTransform="rotate(-22)"><path d="M1 2h3m6 4h5M3 12h6m3 5h4M1 21h3" stroke="#fff9f0" stroke-width="1.2" stroke-linecap="round" opacity=".43"/></pattern>
+  <symbol id="flower" viewBox="0 0 60 60"><g stroke="currentColor" stroke-width="1.2"><path d="M29 34q-15 1-15-8t12-6q-3-16 7-15t7 15q15-6 16 4T42 36q9 11 0 15t-13-10q-7 14-14 7t6-14" fill="#fff4cb"/><circle cx="33" cy="29" r="6" fill="#ffbf36"/></g></symbol>
+  <symbol id="bow" viewBox="0 0 100 65"><g fill="#fff0a9" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M48 27C21 4 4 4 9 29s20 14 39 2M53 28C77 3 95 5 91 28s-21 16-38 4"/><path d="M45 32 23 59l18-7 9-18 12 28 10-5-17-26"/><ellipse cx="50" cy="29" rx="7" ry="8"/></g></symbol>
+  <symbol id="perfume" viewBox="0 0 100 110"><g stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" fill="none"><path d="M37 22v-9h29v10" fill="#ffd75c"/><path d="M40 13 37 4h31l-3 9" fill="#f88bb8"/><path d="M32 26Q21 29 22 42l-2 46q1 12 13 13l39-2q10-2 9-14l-3-44q-1-13-12-14Z" fill="#ffb1cf"/><path d="M30 48h40v39H30Z" fill="#fbf6ec"/><path d="m46 57-7 9 9 10 10-12Z"/><path d="M34 92h34" opacity=".4"/></g></symbol>
+  <symbol id="coffee" viewBox="0 0 110 110"><g stroke="currentColor" stroke-width="1.7" fill="none"><path d="M29 19q-7-9 2-16M49 22q-7-10 2-19" opacity=".5"/><path d="M20 41q-3 41 27 43t31-43" fill="#ffe29a"/><path d="M77 47q29-10 22 13T76 74"/><ellipse cx="49" cy="42" rx="29" ry="8" fill="#ac765a"/><ellipse cx="49" cy="94" rx="42" ry="7" fill="#fff4d7"/><path d="M24 55q1 16 8 20" stroke="#fffaf0" stroke-width="4"/></g></symbol>
+  <symbol id="bouquet" viewBox="0 0 120 130"><g stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"><path d="m30 60 27 64 38-63-29 12Z" fill="#ffd78c"/><path d="m49 77 11 32m21-39-18 40M56 43l6 47m12-46-13 48" fill="none"/><path d="M59 69Q29 57 37 48q18 1 22 21M65 62q26-24 29-9-10 15-29 13" fill="#67c8a4"/><g fill="#ff8cbe"><path d="M37 37c-23-17-12-30 0-24 9-24 25-11 20 0 21-5 25 14 6 19 3 17-13 24-20 9Z"/><path d="M75 44c-19-9-11-22 0-20 7-17 21-11 18 1 19-4 20 12 5 16 4 14-14 20-19 8Z"/></g><circle cx="45" cy="24" r="7" fill="#ffc849"/><circle cx="85" cy="37" r="6" fill="#ffc849"/><path d="m50 99 22 5"/><use href="#bow" x="36" y="88" width="48" height="32"/></g></symbol>
+  <symbol id="book" viewBox="0 0 130 105"><g stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="m7 22 49-10 11 5 48-9 8 73-49 11-12-5-47 9Z" fill="#c5b6f3"/><path d="m12 16 47-9 10 10 43-14 5 70-43 14-13-7-43 8Z" fill="#fbf7e9"/><path d="m59 7 4 73m6-63 5 70M23 28l25-6M25 39l24-5m-24 17 26-5m30-15 23-7M82 42l24-7m-23 18 23-7" fill="none"/><path d="m91 9 3 29 6-7 5 4-3-29" fill="#ff8bb7"/></g></symbol>
+  <symbol id="rain" viewBox="0 0 120 110"><g stroke="currentColor" stroke-width="1.5" fill="none"><path d="M29 63C2 62 10 32 29 34 20 8 60 1 68 23c24-15 43 6 32 24 25 15 7 29-11 23Z" fill="#ecf5ff"/><path d="m34 78-5 10m23-9-6 12m29-10-5 10m24-10-6 12" stroke="#72caf9" stroke-width="3" stroke-linecap="round"/><path d="M42 46q6-12 17-9" stroke="#fffaf0" stroke-width="4"/></g></symbol>
+  <symbol id="star" viewBox="0 0 40 40"><path d="m20 2 5 12 13 4-11 8 1 12-10-8-13 3 6-12L5 10l13 2Z" fill="#ffcf57" stroke="currentColor" stroke-width="1.2"/></symbol>
+  <symbol id="envelope" viewBox="0 0 90 70"><g stroke="currentColor" stroke-width="1.5" fill="#f9eee2"><path d="m7 13 72-5 5 49-74 6Z"/><path d="m7 13 40 27L79 8M11 61l25-27m48 23L57 33" fill="none"/><path d="M46 36c-11-15-21-1 0 10 21-16 10-26 0-10" fill="#f88eae"/></g></symbol>
+ <symbol id="folder" viewBox="0 0 80 64"><g stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M8 16h25l7 8h32v30H8Z" fill="#fff0be"/><path d="M10 28h63l-6 27H8Z" fill="#ffe2b7"/><path d="M25 40h27" fill="none"/></g></symbol>
+ </defs>
+</svg>
+<a class="skip" href="#main">跳到主要内容</a>
+<header class="header">
+ <a class="brand" href="./" aria-label="个人作品集首页"><h1 class="portfolio-label"><span>PERSONAL</span> <span>PORTFOLIO</span></h1></a>
+ <nav aria-label="主要导航"><button class="nav-home active" id="home">首页</button><button data-open="projects">项目与实践</button><button data-open="skills">技能与实证</button><button data-open="contact">联系方式 <span aria-hidden="true">↗</span></button></nav>
+ 
+</header>
+<main id="main">
+ <svg class="tether" aria-hidden="true" viewBox="0 0 50 100" preserveAspectRatio="none"><path d="M25 0Q19 30 25 54T25 100"/></svg>
+ <div class="garland" aria-hidden="true">
+  <svg class="clothesline" viewBox="0 0 1440 200" preserveAspectRatio="none"><path d="M-30 10Q720 265 1470 5"/></svg>
+  <svg class="trinket perfume"><use href="#perfume"/></svg><svg class="trinket coffee"><use href="#coffee"/></svg><svg class="trinket bouquet"><use href="#bouquet"/></svg><svg class="trinket book"><use href="#book"/></svg><svg class="trinket rain"><use href="#rain"/></svg>
+  
+ </div>
+ <section class="hero" aria-label="交互风铃作品集">
+  <div class="bell-world">
+   <div class="bell" id="bell" aria-label="轻轻摆动的风铃：点击纸签查看内容，也可使用下方导航">
+    <svg class="bell-top" viewBox="0 0 560 340" aria-hidden="true">
+     <defs><linearGradient id="cap" x1="0" x2="0.8" y2="1"><stop stop-color="#ffd2e4"/><stop offset=".6" stop-color="#f9a8ca"/><stop offset="1" stop-color="#e87cb0"/></linearGradient></defs>
+     <g filter="url(#pencil)" stroke="#765a78" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M280-32q-13 35-2 67t1 45" fill="none"/><ellipse cx="280" cy="83" rx="9" ry="12" fill="#ffd261"/>
+      <path d="M113 255C124 168 189 102 274 98c89-5 168 61 178 153l-8 22-322 4Z" fill="#f4b3cd"/>
+      <g clip-path="url(#cap-outline)" fill="none" stroke-linecap="round"><path d="M30 315q12-92 83-205" stroke="#f8c6d7" stroke-width="5" opacity="0.19"/><path d="M44 315q12-92 83-205" stroke="#f8c6d7" stroke-width="10" opacity="0.27"/><path d="M58 315q12-92 83-205" stroke="#f8c6d7" stroke-width="6" opacity="0.34"/><path d="M72 315q12-92 83-205" stroke="#f8c6d7" stroke-width="11" opacity="0.19"/><path d="M86 315q12-92 83-205" stroke="#f6c4d8" stroke-width="4" opacity="0.21"/><path d="M100 315q12-92 83-205" stroke="#f6c4d8" stroke-width="10" opacity="0.19"/><path d="M114 315q12-92 83-205" stroke="#f6c4d8" stroke-width="9" opacity="0.34"/><path d="M128 315q12-92 83-205" stroke="#e7a0c4" stroke-width="4" opacity="0.31"/><path d="M142 315q12-92 83-205" stroke="#e7a0c4" stroke-width="7" opacity="0.38"/><path d="M156 315q12-92 83-205" stroke="#f8c6d7" stroke-width="9" opacity="0.38"/><path d="M170 315q12-92 83-205" stroke="#f8c6d7" stroke-width="9" opacity="0.30"/><path d="M184 315q12-92 83-205" stroke="#f6c4d8" stroke-width="6" opacity="0.33"/><path d="M198 315q12-92 83-205" stroke="#f6c4d8" stroke-width="6" opacity="0.23"/><path d="M212 315q12-92 83-205" stroke="#e7a0c4" stroke-width="12" opacity="0.25"/><path d="M226 315q12-92 83-205" stroke="#e7a0c4" stroke-width="5" opacity="0.21"/><path d="M240 315q12-92 83-205" stroke="#f6c4d8" stroke-width="4" opacity="0.30"/><path d="M254 315q12-92 83-205" stroke="#f8c6d7" stroke-width="9" opacity="0.21"/><path d="M268 315q12-92 83-205" stroke="#f8c6d7" stroke-width="12" opacity="0.25"/><path d="M282 315q12-92 83-205" stroke="#f6c4d8" stroke-width="12" opacity="0.23"/><path d="M296 315q12-92 83-205" stroke="#e7a0c4" stroke-width="5" opacity="0.31"/><path d="M310 315q12-92 83-205" stroke="#ee9bbf" stroke-width="11" opacity="0.24"/><path d="M324 315q12-92 83-205" stroke="#e7a0c4" stroke-width="5" opacity="0.38"/><path d="M338 315q12-92 83-205" stroke="#e7a0c4" stroke-width="11" opacity="0.39"/><path d="M352 315q12-92 83-205" stroke="#ee9bbf" stroke-width="10" opacity="0.27"/><path d="M366 315q12-92 83-205" stroke="#e7a0c4" stroke-width="7" opacity="0.33"/><path d="M380 315q12-92 83-205" stroke="#e7a0c4" stroke-width="4" opacity="0.30"/><path d="M394 315q12-92 83-205" stroke="#f6c4d8" stroke-width="5" opacity="0.26"/><path d="M408 315q12-92 83-205" stroke="#f6c4d8" stroke-width="11" opacity="0.23"/><path d="M422 315q12-92 83-205" stroke="#ee9bbf" stroke-width="8" opacity="0.28"/><path d="M436 315q12-92 83-205" stroke="#e7a0c4" stroke-width="11" opacity="0.38"/><path d="M450 315q12-92 83-205" stroke="#e7a0c4" stroke-width="5" opacity="0.21"/><path d="M464 315q12-92 83-205" stroke="#e7a0c4" stroke-width="12" opacity="0.30"/><path d="M110 92h350v205H110Z" fill="url(#wax-grain)" stroke="none"/></g>
+      <path d="M130 243c12-72 67-126 137-134" fill="none" stroke="#ffedf2" stroke-width="6" opacity=".55"/>
+      <path d="M272 105q-38 64-27 158M287 105q44 72 37 158" fill="none" stroke="#d58db0" opacity=".22"/>
+      <ellipse cx="282" cy="266" rx="167" ry="32" fill="#dba2bd"/>
+      <path d="M113 254q13 23 34 11 18 31 43 12 23 31 46 8 23 31 46 5 26 27 49-3 26 22 47-6 29 18 44-7 21 10 30-22" fill="#f5a5cd"/>
+      <path d="M115 252q14 24 33 11 19 31 42 13 24 31 47 9 23 30 46 4 25 28 48-3 26 24 46-5 30 18 45-7 20 9 30-22" fill="none" stroke="#fff3c4" stroke-width="7"/>
+      <path d="M280 282v72" fill="none"/><path d="M275 301q-15 5-10 17t19 2 3-15Z" fill="#ffd466"/>
+      <g class="cap-flowers">
+       <g class="surface-motif" data-longitude="-52" data-y="204"><use href="#flower" x="-24" y="-24" width="48" height="48"/></g>
+       <g class="surface-motif" data-longitude="16" data-y="161"><use href="#flower" x="-21" y="-21" width="42" height="42"/></g>
+       <g class="surface-motif" data-longitude="55" data-y="226"><use href="#flower" x="-24" y="-24" width="48" height="48"/></g>
+       <g class="surface-motif" data-longitude="-15" data-y="239"><use href="#star" x="-13" y="-13" width="26" height="26"/></g>
+       <g class="surface-motif" data-longitude="132" data-y="200"><use href="#flower" x="-23" y="-23" width="46" height="46"/></g>
+       <g class="surface-motif" data-longitude="204" data-y="170"><use href="#star" x="-15" y="-15" width="30" height="30"/></g>
+       <g class="surface-motif" data-longitude="259" data-y="231"><use href="#flower" x="-22" y="-22" width="44" height="44"/></g>
+      </g>
+      <use href="#bow" x="215" y="50" width="132" height="86"/>
+     </g>
+    </svg>
+    <div class="pendants" id="pendants"></div>
+   </div>
+   <div class="rotation-hint"><svg viewBox="0 0 100 35" aria-hidden="true"><path d="M11 11C-5 39 110 38 88 10m-1 0 2 14m-2-14-13 4"/></svg><span>点击纸签查看</span></div>
+  </div>
+
+
+ </section>
+ <section class="index-strip" aria-label="快速浏览"><button data-open="about"><i>01</i> 个人信息 <span aria-hidden="true">↗</span></button><button data-open="education"><i>02</i> 学历背景 <span aria-hidden="true">↗</span></button><button data-open="projects"><i>03</i> 项目与实践 <span aria-hidden="true">↗</span></button><button data-open="skills"><i>04</i> 技能与实证 <span aria-hidden="true">↗</span></button><button data-open="contact"><i>05</i> 联系方式 <span aria-hidden="true">↗</span></button></section>
+</main>
+<footer><span>© 2026 · Personal Portfolio</span><button id="motion" aria-pressed="false">暂停动画</button></footer>
+<dialog id="detail" aria-labelledby="detail-title"><div class="detail-toolbar"><button class="close" aria-label="返回首页"><span aria-hidden="true">←</span>返回首页</button><nav class="detail-nav" aria-label="内容页导航"><button data-open="about">个人信息</button><button data-open="education">学历背景</button><button data-open="projects">项目与实践</button><button data-open="skills">技能与实证</button><button data-open="contact">联系方式</button></nav></div><div class="dialog-paper"><div id="detail-content"></div><div class="dialog-bottom"><span id="page-position">01 / 05</span><button id="next-page">下一项 <span>→</span></button></div></div></dialog>
+<template id="about-page">
+  <p class="detail-eyebrow">01 / ABOUT</p>
+  <h2 class="detail-title" id="detail-title">个人信息</h2>
+  <div class="portfolio-copy">
+<div class="profile-intro">
+<div>
+<h3>张琦翔 · Yuki</h3>
+<p>墨尔本大学文学学士在读｜媒体与传播学、经济学双专业</p>
+<p>课程实践涵盖平台研究、视觉分析、英文学术写作和交互原型设计。曾在木心美术馆与木心故居纪念馆担任志愿者，参与观众接待与现场协调。</p>
+<p>代表项目包括小红书跨文化研究与互动展览，以及私人日常记录应用 MEMEMO。前者包含研究、互动网站、海报和展册，后者包含 Figma 界面设计与公开网页原型。个人创作包括中文随笔、意识流文本和音乐演出现场视频。</p>
+<p>实习方向开放。首页风铃以手绘草图为基础设计。</p>
+</div>
+<img class="profile-photo" src="media/portrait.jpg" alt="张琦翔的证件照" width="1206" height="1599">
+</div>
+<dl class="portfolio-facts">
+  <div class="profile-row"><dt>出生日期</dt><dd>2007 年 3 月 14 日（19 周岁）</dd></div>
+  <div class="profile-row"><dt>MBTI</dt><dd>ENFJ</dd></div>
+  <div class="profile-row"><dt>户籍</dt><dd>浙江宁波</dd></div>
+  <div class="profile-row"><dt>政治面貌</dt><dd>共青团团员</dd></div>
+  <div class="profile-row"><dt>实习地点</dt><dd>可按实习安排搬迁</dd></div>
+  <div class="profile-row"><dt>可实习时间</dt><dd>2026 年 11 月 22 日至 2027 年 2 月 24 日</dd></div>
+</dl>
+  </div>
+</template>
+
+<template id="education-page">
+  <p class="detail-eyebrow">02 / EDUCATION</p>
+  <h2 class="detail-title" id="detail-title">学历背景</h2>
+  <div class="portfolio-copy">
+<h3>墨尔本大学 · The University of Melbourne</h3>
+<p><strong>2025 年 7 月至今｜文学学士（Bachelor of Arts）</strong> 双专业为媒体与传播学、经济学｜当前均分为 H1 档</p>
+<p>媒体与传播学课程包括全球媒体（Understanding Global Media）、传播与社会变革、互联网传播、视觉传播与数字媒体。英文作业涵盖滴滴平台功能、小红书平台可供性、图像分析及反思写作。多项作业获得 H1，教师对选题、文章结构和论证深度给出积极反馈。</p>
+<p>经济学课程包括微观经济学、宏观经济学和定量方法。选修方向还包括性别与文化、哲学议题。小红书跨文化展览为全球媒体课程项目。</p>
+<h3>UNSW Foundation｜商科预科</h3>
+<p><strong>2024 年 7 月至 2025 年 3 月｜GPA 9.4/10，排名第 1</strong></p>
+<p>课程成绩包括经济学 A+、商法 A+、计算机 A、会计 A、商科数学 A、管理学 A−、学术英语（人文方向）B+。经济学课程涵盖微观经济学与宏观经济学。计算机课程涵盖 Excel、Word 和 PowerPoint 的使用。</p>
+<p><a href="media/unsw-transcript.pdf" target="_blank" rel="noopener">查看 UNSW College 预科成绩单（PDF）</a></p>
+<h3>浙江省慈溪中学｜高中</h3>
+<p><strong>2022 年至 2025 年 6 月｜高中毕业</strong></p>
+<p>高中期间长期担任宣传委员，负责班级布置、运动会服装和戏剧表演物资。</p>
+<p>2024 年 6 月离校，之后参加高中毕业考试，于 2025 年 6 月正式毕业。</p>
+<h3>慈溪阳光实验学校｜初中</h3>
+<p><strong>2018–2022｜中考 686 分，全市前 150 名</strong></p>
+<p>曾担任学生校长，创办校园音乐电台，牵头策划、组织并落地植树节和观影活动，参与校园垃圾分类监督。长期担任班长或副班长，牵头组织毕业聚会、跨年晚会、生日会等班级活动。</p>
+<h3>慈溪阳光实验学校｜小学</h3>
+<p><strong>2013–2018</strong></p>
+<p>曾担任学生校长，创办校园音乐电台，牵头策划、组织并落地校级义卖活动。</p>
+  </div>
+</template>
+
+<template id="projects-page">
+  <p class="detail-eyebrow">03 / PROJECTS & PRACTICE</p>
+  <h2 class="detail-title" id="detail-title">项目与实践</h2>
+  <div class="portfolio-copy">
+<h3>小红书跨文化研究与互动展览</h3>
+<p><strong>2026 年第二学期｜Understanding Global Media｜五人小组项目</strong></p>
+<p><strong>研究问题</strong>　2025 年 1 月，一批原本使用 TikTok 的海外用户进入小红书。项目关注新用户与原有用户如何在评论区交流、协商语言使用和社区参与方式。独立确定研究问题，搜集学术文献、帖文与评论、新闻和政策材料，并据此提炼核心论点。</p>
+<p><strong>研究与发现</strong>　选取五则公开帖子，结合正文、图片和可见评论进行定性细读。所选案例中，原有用户为新用户提供翻译建议，也表达了对使用中文和相互尊重的期待。展册以「猫税」为例，呈现社区成员如何用评论和象征性的「收据」回应新用户分享的猫咪照片。</p>
+<p><strong>项目分工</strong>　独立制作并部署互动网站，独立完成折页展册。网站按案例呈现俚语解释、翻译求助与语言使用期待，展册用「猫税」说明评论中的社区规范。负责 A0 海报的整体设计、排版与制作，左下角两个区块由组员放置。完成海报和展册印刷，撰写并整理全组英文讲稿，安排展示顺序并组织演练。课程导师对展示成果给予积极反馈。</p>
+<p><a href="https://zhangyuki618-ux.github.io/language-negotiation/" target="_blank" rel="noopener">查看互动网站</a> · <a href="https://zhangyuki618-ux.github.io/language-negotiation/poster.pdf" target="_blank" rel="noopener">查看 A0 海报（PDF）</a> · <a href="https://zhangyuki618-ux.github.io/language-negotiation/zine.pdf" target="_blank" rel="noopener">查看折页展册（PDF）</a></p>
+<h3>MEMEMO｜私人日常记录应用原型</h3>
+<p><strong>2026 年第二学期｜独立制作｜Figma 界面与公开网页原型</strong></p>
+<p><strong>设计思路</strong>　MEMEMO 是一款以日历为首页的私人日常记录应用原型。用户可添加照片、文字、心情和评分，也可按日期回看或补记过去的内容。</p>
+<p><strong>项目分工</strong>　独立完成功能规划、Figma 界面与交互设计、网页原型和公开部署。将日历、记录编辑和回看串成可操作的流程，并制作操作演示、设计分析报告与英文展示稿。</p>
+<p><strong>Figma 设计实证</strong>　设计画布展示了启动与注册、日历首页、照片上传与评分、记录回看、个人页，以及隐私和 PIN 设置等界面与状态。</p>
+<figure class="evidence-figure"><a href="media/mememo-figma.png" target="_blank" rel="noopener"><img src="media/mememo-figma.png" alt="MEMEMO 的 Figma 设计画布，展示日历、记录编辑、照片与评分、个人页和设置" loading="lazy" width="2870" height="1590"></a><figcaption>MEMEMO · Figma 设计画布</figcaption></figure>
+<p><a href="https://zhangyuki618-ux.github.io/MEMEMO/" target="_blank" rel="noopener">体验 MEMEMO 网页原型</a></p>
+<h3>木心美术馆与木心故居纪念馆｜志愿者</h3>
+<p><strong>2026 年 2 月 4 日至 2 月 27 日｜春节接待、观众服务与现场协调</strong></p>
+<p><strong>接待工作</strong>　春节期间在两馆轮岗，参与讲解、值守与秩序维护，协助咖啡厅及纪念品店导购，并用英语向外籍游客说明物品寄存流程。</p>
+<p><strong>观众反馈</strong>　邀请游客填写调查问卷，汇总结果，并向行政馆长提出会员卡升级建议。</p>
+<p><strong>现场处理</strong>　遇到游客坚持拍摄手稿时，多次解释展品的拍摄规定并劝阻，随后与前台协调，制止违规拍摄。</p>
+<p><strong>志愿服务证明</strong>　木心美术馆于 2026 年 2 月 27 日出具盖章证明，确认 2026 年 2 月 4 日至 27 日在乌镇木心美术馆志愿服务，并在美术馆与故居纪念馆的不同岗位实践。<a href="media/muxin-volunteer.jpg" target="_blank" rel="noopener">查看志愿者证明</a></p>
+  </div>
+</template>
+
+<template id="skills-page">
+  <p class="detail-eyebrow">04 / SKILLS & WORK SAMPLES</p>
+  <h2 class="detail-title" id="detail-title">技能与实证</h2>
+  <div class="portfolio-copy">
+<h3>工作技能</h3>
+<h4>研究与英文学术写作</h4>
+<p>完成平台功能、平台可供性、图像分析及反思类英文作业，多项获得 H1。</p>
+<h5>滴滴「女司机优先」｜研究论文</h5>
+<p><em>Safety by Design? Benefits and Hidden Costs of DiDi’s Female-Driver Priority</em></p>
+<p>以滴滴「女司机优先」为例，结合 Type C 众包劳动分类、应用界面截图、学术文献和公开讨论，分析乘客偏好如何进入平台派单规则。论文指出，优先匹配可以回应女性乘客的安全顾虑，也可能为女司机带来额外订单。更远的接驾距离和乘客对额外照顾的期待，则可能增加女司机的时间、油费和情绪劳动成本。</p>
+<p><a href="media/didi-research-essay.pdf" target="_blank" rel="noopener">查看研究论文（PDF）</a></p>
+<h5>喀布尔婚纱店摄影｜图像分析</h5>
+<p><em>Bridal Beauty Becomes a Cage: Visualizing Compulsory Femininity and Erased Subjectivity in Kiana Hayeri’s Photograph</em></p>
+<p>以摄影师 Kiana Hayeri 在阿富汗喀布尔婚纱店拍摄的照片为对象，沿 Gillian Rose 的图像生产、画面、传播与观看框架展开分析。论文细读亮色婚纱、面部被遮盖且缺失双手的人台、密集的镜面反射，并结合照片的展出和观众反应，讨论画面的华丽与压迫感如何并存，以及它们如何指向塔利班治下女性公共可见性与主体性受到的限制。</p>
+<p><a href="media/image-analysis.pdf" target="_blank" rel="noopener">查看图像分析（PDF）</a></p>
+<h4>英文沟通与展示</h4>
+<p>可在全英环境中无障碍沟通，能够完成高分英文学术写作与流畅的英文口头展示。</p>
+<h4>内容制作与项目交付</h4>
+<p>负责研究内容的组织、展览材料的设计与印刷，以及现场展示流程安排。</p>
+<p><strong>小红书跨文化互动展览</strong>　将同一项研究制作成互动网站、A0 海报和折页展册。网站按案例呈现评论区互动，海报集中展示研究框架与发现，展册用「猫税」案例解释社区规范。<a href="https://zhangyuki618-ux.github.io/language-negotiation/" target="_blank" rel="noopener">互动网站</a> · <a href="https://zhangyuki618-ux.github.io/language-negotiation/poster.pdf" target="_blank" rel="noopener">海报</a> · <a href="https://zhangyuki618-ux.github.io/language-negotiation/zine.pdf" target="_blank" rel="noopener">展册</a></p>
+<h4>交互原型与网页制作</h4>
+<p>使用 Figma、Uizard 制作界面或交互原型，使用 Codex、Claude、Gemini 等工具辅助网页制作，并通过 GitHub 或国内平台部署。</p>
+<p><strong>作品</strong>　MEMEMO 从 Figma 界面做到可体验的网页原型，支持日常记录和按日期回看。圣诞树主题网页于 2025 年底使用 Gemini 辅助制作。<a href="media/mememo-figma.png" target="_blank" rel="noopener">查看 Figma 截图</a> · <a href="https://zhangyuki618-ux.github.io/MEMEMO/" target="_blank" rel="noopener">体验 MEMEMO</a> · <a href="https://superapp.run/xiao-qi-feng-ling/christmas-tree" target="_blank" rel="noopener">查看圣诞树网页</a></p>
+<h4>办公与信息整理</h4>
+<p>熟练使用 Excel 公式、图表与格式设置，以及 PowerPoint 和 Word。曾汇总木心美术馆游客问卷，并依据反馈提出建议。UNSW 商科预科 Advanced Computing 期末限时考试作品展示了 Excel 公式在预算和财务计算中的应用，以及用组合图对比月度支出与工资。<a href="media/advanced-computing.xlsx" download>查看 Excel 考试作品</a></p>
+<h4>中文写作</h4>
+<p>初中和高中阶段均有作文多次入选年级范文。</p>
+<p><strong>小红书原创写作</strong>　分享随笔与意识流文本，累计获赞与收藏 6,473 次。<a href="https://xhslink.cn/o/AavRSiMHN0T" target="_blank" rel="noopener">查看小红书主页</a></p>
+<h4>演出现场拍摄与剪辑</h4>
+<p>完成音乐演出现场拍摄、剪辑与发布。作品发布于抖音、小红书和视频号。</p>
+<p><strong>演出现场视频</strong>　按简历整理时的数据，抖音账号有 1,000+ 位关注者，单条视频播放量通常为 1,000 至 25,000。<a href="https://weixin.qq.com/sph/AGkAoNMZGU" target="_blank" rel="noopener">观看演出现场视频</a></p>
+<h3>生活技能与资质</h3>
+<ul>
+  <li>持有 C2 驾驶证。</li>
+  <li>会调制鸡尾酒、制作咖啡，持有维多利亚州 RSA（Responsible Service of Alcohol）证书。</li>
+  <li>中国画六级、书法八级、围棋业余二段。</li>
+</ul>
+  </div>
+</template>
+
+<template id="contact-page">
+  <p class="detail-eyebrow">05 / CONTACT</p>
+  <h2 class="detail-title" id="detail-title">联系方式</h2>
+  <div class="portfolio-copy">
+<p>项目、作品及实习相关沟通可通过以下方式联系。</p>
+<dl class="portfolio-facts">
+  <div class="profile-row"><dt>电子邮箱</dt><dd><a href="mailto:zqx070314@icloud.com">zqx070314@icloud.com</a></dd></div>
+  <div class="profile-row"><dt>手机</dt><dd><a href="tel:18367438255">18367438255</a></dd></div>
+  <div class="profile-row"><dt>可实习时间</dt><dd>2026 年 11 月 22 日至 2027 年 2 月 24 日</dd></div>
+  <div class="profile-row"><dt>简历</dt><dd><a href="media/resume.pdf" download="张琦翔简历.pdf">下载简历（PDF）</a></dd></div>
+</dl>
+  </div>
+</template>
+</body>
+</html>
